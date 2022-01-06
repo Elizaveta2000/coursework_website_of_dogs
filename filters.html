@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Собачий дом</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  <link rel="stylesheet" href="css/filters.css" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">.
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="tm-left-right-container">
+        <!-- Left column: logo and menu -->
+        <div class="tm-blue-bg tm-left-column">
+          <div class="tm-logo-div text-xs-center">
+            <a href="index.html"> <img src="img/logo.png" alt="Logo" /> </a>
+            <h1 class="tm-site-name">Собачий дом</h1>
+          </div>
+          <nav class="tm-main-nav">
+            <ul class="tm-main-nav-ul">
+              <li class="tm-nav-item">
+                <a href="#welcome" class="tm-nav-item-link">Что такое фильтры?</a>
+              </li>
+              <li class="tm-nav-item">
+                <a href="#about" class="tm-nav-item-link">Фильтры</a>
+              </li>
+              </li>
+              <li class="tm-nav-item">
+                <a href="#contact" class="tm-nav-item-link">Связаться с нами</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Left column: logo and menu -->
+        <!-- Right column: content -->
+        <div class="tm-right-column">
+          <figure>
+            <img src="img/header.jpg" alt="Header image" class="img-fluid" />
+          </figure>
+          <div class="tm-content-div">
+            <!-- Welcome section -->
+            <section id="welcome" class="tm-section">
+              <header>
+                <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">
+                    Найдите собаку по душе! </h2>
+              </header>
+              <p>
+                
+              </p>
+            </section>
+            <!-- About section -->
+            <section id="about" class="tm-section">
+              <div class="row">
+                <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 push-lg-4 push-md-5">
+                  <header>
+                    <h2 class="tm-blue-text tm-section-title tm-margin-b-45">
+                        Что такое фильтры?
+                    </h2>
+                  </header>
+                  <p>
+                    Для Вашего удобства, наш сайт имеет ряд фильтров для поиска вашего любимца.
+                    Вы можете выбрать желаемый пол, возраст, размер и цвет собаки.
+                    Выбирайте те характеристики, которые считаете важными для Вас.
+                  </p>   
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pull-lg-8 pull-md-7 tm-about-img-container">
+                  <img src="img/about.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+            </section>
+            <h1 class="FILL" >Фильтры:</h1>
+            <form action="filters_dog.php" method="GET">
+              <div class="form_radio_btn">
+                <p>Пол:</p>
+                <input id=checkbox_1 type="radio" name="sex" value=" AND id_sex.id_sex > 0" checked>
+                <label for="checkbox_1">ЛЮБОЙ</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_2 type="radio" name="sex" value="AND id_sex.id_sex = 1">
+                <label for="checkbox_2">СУКА</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_3 type="radio" name="sex" value="AND id_sex.id_sex = 2">
+                <label for="checkbox_3">КОБЕЛЬ </label>
+              </div>
+              <br>
+              <div class="form_radio_btn">
+                <p>Возраст:</p>
+                <input id=checkbox_4 type="radio" name="id_age" value="AND id_age.id > 0" checked>
+                <label for="checkbox_4">ЛЮБОЙ</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_5 type="radio" name="id_age" value="AND id_age.id > 19 ">
+                <label for="checkbox_5">До 3-х лет</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_6 type="radio" name="id_age" value="AND id_age.id > 16 AND id_age.id < 20">
+                <label for="checkbox_6">От 3-х до 5-ти </label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_7 type="radio" name="id_age" value="AND id_age.id < 17">
+                <label for="checkbox_7">От 5-ти </label>
+              </div>
+              <br>
+              <div class="form_radio_btn">
+                <p>Размер:</p>
+                <input id=checkbox_8 type="radio" name="id_size" value="AND id_size.id_size > 0" checked>
+                <label for="checkbox_8">ЛЮБОЙ</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_10 type="radio" name="id_size" value="AND id_size.id_size = 2">
+                <label for="checkbox_10">Маленький (5-10 кг, 30-40 см)</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_11 type="radio" name="id_size" value="AND id_size.id_size = 3">
+                <label for="checkbox_11">Средний (10-20 кг, 40-56 см)</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_12 type="radio" name="id_size" value="AND id_size.id_size = 4">
+                <label for="checkbox_12">Большой (20-30 кг, 56-65 см)</label>
+              </div>
+              <br><br>
+              <div class="form_radio_btn">
+                <p>Цвет:</p>
+                <input id=checkbox_13 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%%'" checked>
+                <label for="checkbox_13">ЛЮБОЙ</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_14 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Чёрный%'">
+                <label for="checkbox_14">Чёрный</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_15 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Коричневый%'">
+                <label for="checkbox_15">Коричневый</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_16 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Серый%'">
+                <label for="checkbox_16">Серый</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_17 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Белый%'">
+                <label for="checkbox_17">Белый</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_18 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Жёлтый%'">
+                <label for="checkbox_18">Жёлтый</label>
+              </div>
+              <div class="form_radio_btn">
+                <input id=checkbox_19 type="radio" name="id_colorOne" value="AND color_name_text.colors LIKE '%Рыжий%'">
+                <label for="checkbox_19">Рыжий</label>
+              </div>
+              <br>
+              <br>
+              <input class="button_sub" type="submit" value="Найти" checked>
+              <br><br><br>
+            </form>
+            <!-- Contact Us section -->
+            <section id="contact" class="tm-section">
+              <header>
+                <h2 class="tm-blue-text tm-section-title tm-margin-b-30">
+                  Связаться с нами
+                </h2>
+              </header>
+              <div class="row">
+                <div class="col-lg-6">
+                  <form action="#contact" method="post" class="contact-form">
+                    <div class="form-group">
+                      <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"
+                        required />
+                    </div>
+                    <div class="form-group">
+                      <input type="email" id="contact_email" name="contact_email" class="form-control"
+                        placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                      <textarea id="contact_message" name="contact_message" class="form-control" rows="9"
+                        placeholder="Message" required>
+                        </textarea>
+                    </div>
+                    <button type="submit" class="float-right tm-button">
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+                <div class="col-lg-6 tm-contact-right">
+                  <p>
+                    Вы можете отправить нам свой вопрос или предложение
+                  </p>
+                  <address>
+                    Мы находимся по адрессу<br />
+                    Псков, ул. Советской Армии, 56 Б<br />
+                    телефон +7-921-211-03-03
+                  </address>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
